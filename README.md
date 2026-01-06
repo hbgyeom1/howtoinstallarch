@@ -113,3 +113,9 @@ vim /boot/loader/entries/arch-fallback.conf
 # initrd  /initramfs-linux-fallback.img
 # options root=UUID=<xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx> rw
 ```
+
+### 14. Reboot
+```
+exit
+umount -R /mnt
+```
