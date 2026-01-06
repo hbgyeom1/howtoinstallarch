@@ -27,3 +27,10 @@ mount /dev/nvme0n1p3 /mnt
 mount --mkdir /dev/nvme0n1p1 /mnt/boot
 swapon /dev/nvme0n1p2
 ```
+
+### 5. Select the mirrors
+
+### 6. Install essential packages
+```
+pacstrap -K /mnt base linux linux-firmware
+```
