@@ -10,6 +10,6 @@ cfdisk /dev/nvme0n1
 ```
 |Mount point|Partition type|Size|
 |:---:|:---:|:---:|
-|/boot|EFI system|1 GiB|
-|[swap]|Linux swap|4 GiB|
+|/boot|EFI system|1G|
+|Swap|Linux swap|4G|
 |/|Linux root (x86-64)|Remainder|
