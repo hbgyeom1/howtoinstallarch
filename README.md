@@ -106,10 +106,10 @@ vim /boot/loader/entries/arch.conf
 # title   Arch Linux
 # linux   /vmlinuz-linux
 # initrd  /initramfs-linux.img
-# options root=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx rw
+# options root=UUID=<xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx> rw
 vim /boot/loader/entries/arch-fallback.conf
 # title   Arch Linux (fallback initramfs)
 # linux   /vmlinuz-linux
 # initrd  /initramfs-linux-fallback.img
-# options root=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx rw
+# options root=UUID=<xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx> rw
 ```
