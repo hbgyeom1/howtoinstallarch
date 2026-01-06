@@ -36,8 +36,8 @@ swapon /dev/swap_partition
 
 ### 5. Select the mirrors
 ```bash
-reflector --country South_Korea --age 12 --protocal https --sort rate
-reflector --country South_Korea --age 12 --protocal https --sort rate --save /etc/pacman.d/mirrorlist
+reflector --country "South Korea" --age 12 --protocal https --sort rate
+reflector --country "South Korea" --age 12 --protocal https --sort rate --save /etc/pacman.d/mirrorlist
 ```
 
 ### 6. Install essential packages
