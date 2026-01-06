@@ -8,6 +8,8 @@ ping ping.archlinux.org
 ```
 cfdisk /dev/nvme0n1
 ```
-/boot
-[swap]
-/
+|Mount point|Partition type|Size|
+|:---:|:---:|:---:|
+|/boot|EFI system|1 GiB|
+|[swap]|Linux swap|4 GiB|
+|/|Linux x86-64 root (/)|Remainder|
