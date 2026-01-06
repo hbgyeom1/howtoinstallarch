@@ -94,3 +94,22 @@ grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 #### 13.2. systemd-boot
+```
+bootctl install
+vim /boot/loader/loader.conf
+# default  arch.conf
+# timeout  4
+# console-mode max
+# editor   no
+blkid
+vim /boot/loader/entries/arch.conf
+# title   Arch Linux
+# linux   /vmlinuz-linux
+# initrd  /initramfs-linux.img
+# options root=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx rw
+vim /boot/loader/entries/arch-fallback.conf
+# title   Arch Linux (fallback initramfs)
+# linux   /vmlinuz-linux
+# initrd  /initramfs-linux-fallback.img
+# options root=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx rw
+```
