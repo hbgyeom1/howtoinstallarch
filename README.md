@@ -88,3 +88,5 @@ systemctl enable NetworkManager
 ```
 passwd
 ```
+
+### 13. Boot loader
