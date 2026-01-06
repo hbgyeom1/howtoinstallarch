@@ -1,18 +1,21 @@
 ### 1. Connect to the internet
 ```
+iwctl station wlan0 scan
+iwctl station wlan0 get-networks
 iwctl station wlan0 connect <SSID>
 ping ping.archlinux.org
 ```
 
 ### 2. Partition the disks
 ```
-cfdisk /dev/nvme0n1
+fdisk -l
+cfdisk /dev/the_disk_to_be_partitioned
 ```
-|Mount point|Partition type|Size|
-|:---:|:---:|:---:|
-|/boot|EFI system|1G|
-|Swap|Linux swap|4G|
-|/|Linux root (x86-64)||
+|Mount point|Partition|Partition type|Size|
+|:---:|:---:|:---:|:---:|
+|/boot|efi_system_partition|EFI system|1G|
+|Swap|swap_partition|Linux swap|4G|
+|/|root_partition|Linux root (x86-64)||
 
 ### 3. Format the partitions
 ```
