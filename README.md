@@ -87,3 +87,5 @@ passwd
 ```
 
 ### 13. Boot loader
+#### 13.1. GRUB
+#### 13.2. systemd-boot
