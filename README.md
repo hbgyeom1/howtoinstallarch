@@ -3,7 +3,7 @@
 iwctl
 station wlan0 scan
 station wlan0 get-networks
-station wlan0 connect <SSID>
+station wlan0 connect SSID
 exit
 ping ping.archlinux.org
 ```
@@ -74,7 +74,7 @@ vim /etc/locale.conf
 ### 11. Network configuration
 ```
 vim /etc/hostname
-# Add <yourhostname>
+# Add yourhostname
 ```
 ```
 pacman -S networkmanager
@@ -106,12 +106,12 @@ vim /boot/loader/entries/arch.conf
 # title   Arch Linux
 # linux   /vmlinuz-linux
 # initrd  /initramfs-linux.img
-# options root=UUID=<xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx> rw
+# options root=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx rw
 vim /boot/loader/entries/arch-fallback.conf
 # title   Arch Linux (fallback initramfs)
 # linux   /vmlinuz-linux
 # initrd  /initramfs-linux-fallback.img
-# options root=UUID=<xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx> rw
+# options root=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx rw
 ```
 
 ### 14. Reboot
