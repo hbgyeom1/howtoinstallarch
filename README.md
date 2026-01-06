@@ -34,3 +34,19 @@ swapon /dev/nvme0n1p2
 ```
 pacstrap -K /mnt base linux linux-firmware
 ```
+
+### 7. Fstab
+```
+genfstab -U /mnt >> /mnt/etc/fstab
+```
+
+### 8. Chroot
+```
+arch-chroot /mnt
+```
+
+### 9. Time
+```
+ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
+hwclock --systohc
+```
