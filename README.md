@@ -11,7 +11,7 @@ ping ping.archlinux.org
 ### 2. Partition the disks
 ```
 fdisk -l
-fdisk /dev/the_disk_to_be_partitioned
+cfdisk /dev/the_disk_to_be_partitioned
 ```
 |Mount point|Partition|Partition type|Size|
 |:---:|:---:|:---:|:---:|
