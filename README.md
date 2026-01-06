@@ -88,4 +88,9 @@ passwd
 
 ### 13. Boot loader
 #### 13.1. GRUB
+```
+pacman -S grub efibootmgr
+grub-install --target=x86_64-efi --efi-directory=esp --bootloader-id=GRUB
+grub-mkconfig -o /boot/grub/grub.cfg
+```
 #### 13.2. systemd-boot
