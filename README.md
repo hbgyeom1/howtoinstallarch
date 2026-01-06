@@ -77,9 +77,13 @@ vim /etc/locale.conf
 ```
 vim /etc/hostname
 # Add yourhostname
-passwd
 ```
 ```
 pacman -S networkmanager
 systemctl enable NetworkManager
+```
+
+### 12. Root password
+```
+passwd
 ```
