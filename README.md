@@ -1,4 +1,4 @@
-##### 1. Connect to the internet
+### 1. Connect to the internet
 ```
 iwctl station wlan0 connect <SSID>
 ping ping.archlinux.org
