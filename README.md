@@ -120,3 +120,13 @@ exit
 umount -R /mnt
 reboot
 ```
+
+### 15. Add a new user
+```
+useradd -m -G wheel username
+passwd username
+```
+```
+pacman -S sudo
+visudo
+# Uncomment %wheel ALL=(ALL) ALL
