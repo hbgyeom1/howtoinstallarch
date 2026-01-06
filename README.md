@@ -58,6 +58,7 @@ arch-chroot /mnt
 ### 9. Time
 ```
 ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
+
 hwclock --systohc
 ```
 
