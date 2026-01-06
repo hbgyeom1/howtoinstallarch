@@ -5,7 +5,6 @@ station wlan0 scan
 station wlan0 get-networks
 station wlan0 connect <SSID>
 exit
-
 ping ping.archlinux.org
 ```
 
@@ -58,7 +57,6 @@ arch-chroot /mnt
 ### 9. Time
 ```
 ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
-
 hwclock --systohc
 ```
 
@@ -66,7 +64,6 @@ hwclock --systohc
 ```
 vim /etc/locale.gen
 # Uncomment en_US.UTF-8 UTF-8
-
 locale-gen
 ```
 ```
