@@ -12,4 +12,4 @@ cfdisk /dev/nvme0n1
 |:---:|:---:|:---:|
 |/boot|EFI system|1G|
 |Swap|Linux swap|4G|
-|/|Linux root (x86-64)|Remainder|
+|/|Linux root (x86-64)||
