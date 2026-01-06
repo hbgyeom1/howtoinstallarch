@@ -118,4 +118,5 @@ vim /boot/loader/entries/arch-fallback.conf
 ```
 exit
 umount -R /mnt
+reboot
 ```
