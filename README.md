@@ -1,8 +1,7 @@
 ### 1. Connect to the internet
 ```
-iwctl station wlan0 scan
-iwctl station wlan0 get-networks
 iwctl station wlan0 connect <SSID>
+
 ping ping.archlinux.org
 ```
 
@@ -19,16 +18,16 @@ cfdisk /dev/the_disk_to_be_partitioned
 
 ### 3. Format the partitions
 ```
-mkfs.ext4 /dev/nvme0n1p3
-mkswap /dev/nvme0n1p2
-mkfs.fat -F 32 /dev/nvme0n1p1
+mkfs.ext4 /dev/root_partition
+mkswap /dev/swap_partition
+mkfs.fat -F 32 /dev/efi_system_partition
 ```
 
 ### 4. Mount the file systems
 ```
-mount /dev/nvme0n1p3 /mnt
-mount --mkdir /dev/nvme0n1p1 /mnt/boot
-swapon /dev/nvme0n1p2
+mount /dev/root_partition /mnt
+mount --mkdir /dev/efi_system_partition /mnt/boot
+swapon /dev/swap_partition
 ```
 
 ### 5. Select the mirrors
