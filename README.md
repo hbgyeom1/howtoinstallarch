@@ -1,3 +1,4 @@
+# 1. Pre-installation
 ### 1. Connect to the internet
 ```
 iwctl
@@ -32,7 +33,7 @@ mount /dev/root_partition /mnt
 mount --mkdir /dev/efi_system_partition /mnt/boot
 swapon /dev/swap_partition
 ```
-
+# 2. Installation
 ### 5. Select the mirrors
 ```
 reflector --country "South Korea" --age 12 --protocal https --sort rate
@@ -120,7 +121,7 @@ exit
 umount -R /mnt
 reboot
 ```
-
+# 3. Post-installation
 ### 15. Add a new user
 ```
 useradd -m -G wheel username
