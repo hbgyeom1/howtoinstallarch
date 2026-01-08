@@ -131,3 +131,4 @@ passwd username
 pacman -S sudo
 EDITOR=vim visudo
 # Uncomment %wheel ALL=(ALL) ALL
+```
