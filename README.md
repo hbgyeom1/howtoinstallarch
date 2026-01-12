@@ -56,19 +56,16 @@ hwclock --systohc
 ### 10. Localization
 ```
 pacman -S vim
-vim /etc/locale.gen
-# Uncomment en_US.UTF-8 UTF-8
+vim /etc/locale.gen # Uncomment en_US.UTF-8 UTF-8
 locale-gen
 ```
 ```
-vim /etc/locale.conf
-# Add LANG=en_US.UTF-8
+vim /etc/locale.conf # Add LANG=en_US.UTF-8
 ```
 
 ### 11. Network configuration
 ```
-vim /etc/hostname
-# Add yourhostname
+vim /etc/hostname # Add yourhostname
 ```
 ```
 pacman -S networkmanager
