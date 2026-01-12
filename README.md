@@ -4,7 +4,7 @@
 iwctl
 station wlan0 scan
 station wlan0 get-networks
-station wlan0 connect iptime5G
+station wlan0 connect SSID
 exit
 ping ping.archlinux.org
 ```
@@ -22,16 +22,16 @@ cfdisk /dev/nvme0n1
 
 ### 3. Format the partitions
 ```
-mkfs.ext4 /dev/nvme0n1p3
-mkswap /dev/nvme0n1p2
-mkfs.fat -F 32 /dev/nvme0n1p1
+mkfs.ext4 /dev/root_partition
+mkswap /dev/swap_partition
+mkfs.fat -F 32 /dev/efi_system_partition
 ```
 
 ### 4. Mount the file systems
 ```
-mount /dev/nvme0n1p3 /mnt
-mount --mkdir /dev/nvme0n1p1 /mnt/boot
-swapon /dev/nvme0n1p2
+mount /dev/root_partition /mnt
+mount --mkdir /dev/efi_system_partition /mnt/boot
+swapon /dev/swap_partition
 ```
 # 2. Installation
 ### 5. Select the mirrors
@@ -92,7 +92,7 @@ passwd
 #### 13.1. GRUB
 ```
 pacman -S grub efibootmgr
-grub-install --target=x86_64-efi --efi-directory=/boot --removable
+grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 #### 13.2. systemd-boot
