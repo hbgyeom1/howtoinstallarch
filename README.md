@@ -1,16 +1,11 @@
 ### 1. Connect to the internet
 ```
-iwctl
-station wlan0 scan
-station wlan0 get-networks
-station wlan0 connect SSID
-exit
+iwctl station wlan0 connect SSID
 ping ping.archlinux.org
 ```
 
 ### 2. Partition the disks
 ```
-fdisk -l
 cfdisk /dev/the_disk_to_be_partitioned
 ```
 |Mount point|Partition|Partition type|Size|
@@ -34,7 +29,6 @@ swapon /dev/swap_partition
 ```
 ### 5. Select the mirrors
 ```
-reflector --country "South Korea" --age 12 --protocal https --sort rate
 reflector --country "South Korea" --age 12 --protocal https --sort rate --save /etc/pacman.d/mirrorlist
 ```
 
