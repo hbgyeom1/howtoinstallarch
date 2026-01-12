@@ -4,7 +4,7 @@
 iwctl
 station wlan0 scan
 station wlan0 get-networks
-station wlan0 connect SSID
+station wlan0 connect iptime5G
 exit
 ping ping.archlinux.org
 ```
@@ -12,7 +12,7 @@ ping ping.archlinux.org
 ### 2. Partition the disks
 ```
 fdisk -l
-cfdisk /dev/the_disk_to_be_partitioned
+cfdisk /dev/nvme0n1
 ```
 |Mount point|Partition|Partition type|Size|
 |:---:|:---:|:---:|:---:|
@@ -22,16 +22,16 @@ cfdisk /dev/the_disk_to_be_partitioned
 
 ### 3. Format the partitions
 ```
-mkfs.ext4 /dev/root_partition
-mkswap /dev/swap_partition
-mkfs.fat -F 32 /dev/efi_system_partition
+mkfs.ext4 /dev/nvme0n1p3
+mkswap /dev/nvme0n1p2
+mkfs.fat -F 32 /dev/nvme0n1p1
 ```
 
 ### 4. Mount the file systems
 ```
-mount /dev/root_partition /mnt
-mount --mkdir /dev/efi_system_partition /mnt/boot
-swapon /dev/swap_partition
+mount /dev/nvme0n1p3 /mnt
+mount --mkdir /dev/nvme0n1p1 /mnt/boot
+swapon /dev/nvme0n1p2
 ```
 # 2. Installation
 ### 5. Select the mirrors
@@ -63,6 +63,7 @@ hwclock --systohc
 
 ### 10. Localization
 ```
+pacman -S vim
 vim /etc/locale.gen
 # Uncomment en_US.UTF-8 UTF-8
 locale-gen
