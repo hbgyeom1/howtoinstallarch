@@ -12,7 +12,7 @@ ping ping.archlinux.org
 ### 2. Partition the disks
 ```
 fdisk -l
-cfdisk /dev/nvme0n1
+cfdisk /dev/the_disk_to_be_partitioned
 ```
 |Mount point|Partition|Partition type|Size|
 |:---:|:---:|:---:|:---:|
